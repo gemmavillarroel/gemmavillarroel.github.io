@@ -328,10 +328,21 @@
       .exp-item { grid-template-columns: 1fr; }
       .exp-meta { text-align: left; margin-bottom: 0.3rem; }
       nav { padding: 0 1rem; }
-      .nav-links { gap: 1rem; }
+      .nav-links { gap: 0.9rem; }
+      .nav-links a { font-size: 0.8rem; }
     }
     @media (max-width: 480px) {
-      .nav-links li:nth-child(n+4) { display: none; }
+      nav { padding: 0 0.6rem; }
+      .nav-logo { display: none; }            /* libera espacio para los 5 enlaces */
+      .nav-links {
+        gap: 0.55rem;
+        flex: 1;
+        justify-content: space-between;
+      }
+      .nav-links a { font-size: 0.72rem; letter-spacing: 0; white-space: nowrap; }
+    }
+    @media (max-width: 360px) {
+      .nav-links a { font-size: 0.66rem; }
     }
 
     /* ── SCROLL REVEAL ─────────────────────────────────────────────────────── */
@@ -432,6 +443,7 @@
         <div class="skill-card-title">Lenguajes</div>
         <div class="skill-tags">
           <span class="skill-tag">Java</span>
+          <span class="skill-tag">C++</span>
           <span class="skill-tag">JavaScript</span>
           <span class="skill-tag">Python</span>
           <span class="skill-tag">HTML/CSS</span>
@@ -583,7 +595,7 @@
         </div>
         <div>
           <div class="exp-role">Coordinadora Regional</div>
-          <div class="exp-company">Ciudadanos – Castilla y León</div>
+          <div class="exp-company">Organización política · Castilla y León</div>
           <ul class="exp-bullets">
             <li>Coordinación de equipos y estructuras territoriales en la comunidad autónoma.</li>
             <li>Planificación, seguimiento y ejecución de acciones estratégicas.</li>
@@ -627,7 +639,7 @@
         </div>
         <div>
           <div class="exp-role">Miembro de la Ejecutiva Nacional</div>
-          <div class="exp-company">Ciudadanos</div>
+          <div class="exp-company">Organización política · Ámbito nacional</div>
           <ul class="exp-bullets">
             <li>Participación en órganos de dirección y análisis estratégico nacional.</li>
             <li>Representación institucional y comunicación pública.</li>
